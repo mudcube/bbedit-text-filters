@@ -4,10 +4,9 @@ process.stdin.resume();
 process.stdin.setEncoding('utf8');
 process.stdin.on('data', function(chunk) {
 	process.stdout.write(js_beautify(chunk, {
-		indent: '\t',
-		openbrace: 'end-of-line',
-		autosemicolon: true
-	}));
+		'indent_size': 1,
+		'indent_char': '\t'
+    }));
 });
 
 /*jshint curly:true, eqeqeq:true, laxbreak:true, noempty:false */
